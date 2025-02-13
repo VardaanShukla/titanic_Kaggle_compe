@@ -67,7 +67,7 @@ rf_model.fit(X_train, y_train)
 
 ## 🎯 Model Evaluation
 ### ✅ **Confusion Matrix**
-![Confusion Matrix](results/confusion_matrix.png)
+![Confusion Matrix](results/confusion.jpg)
 ```python
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
@@ -76,7 +76,7 @@ plt.show()
 ```
 
 ### ✅ **Feature Importance**
-![Feature Importance](results/feature_importance.png)
+![Feature Importance](results/importance.jpg)
 ```python
 importances = rf_model.feature_importances_
 sns.barplot(x=importances, y=X_train.columns)
@@ -84,7 +84,7 @@ plt.show()
 ```
 
 ### ✅ **ROC Curve**
-![ROC Curve](results/roc_curve.png)
+![ROC Curve](results/ROC.jpg)
 ```python
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, _ = roc_curve(y_test, rf_model.predict_proba(X_test)[:,1])
